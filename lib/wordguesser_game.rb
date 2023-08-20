@@ -1,5 +1,5 @@
 class WordGuesserGame
-
+  # first, make all the getters and setters
   attr_accessor :word, :guesses, :wrong_guesses
 
   # add the necessary class methods, attributes, etc. here
@@ -26,6 +26,8 @@ class WordGuesserGame
     }
   end
 
+# ==================================================================
+# ==================================================================
   def guess(letter)
     # check for valid input
     # raise ArgumentError if letter is nil, empty, or not a letter
@@ -46,7 +48,7 @@ class WordGuesserGame
     end
     return true
   end
-
+# ==================================================================
   def word_with_guesses
     # return word with guessed letters filled in
     # if no letters guessed, return all dashes
@@ -56,7 +58,7 @@ class WordGuesserGame
     # replace dashes with guessed letters
     @word.gsub(/[^#{@guesses}]/, '-')
   end
-
+# ==================================================================
   def check_win_or_lose
     # return :win, :lose, or :play depending on game state
     # if all letters guessed, return :win
